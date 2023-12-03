@@ -1,5 +1,5 @@
 # adventofcode-2023
-How I solve each operation to restore snow
+My solutions to adventofcode.com puzzles.
 
-### Advent of code 
-https://adventofcode.com/2023
+# Language
+Javascript
