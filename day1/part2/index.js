@@ -63,8 +63,8 @@ async function main() {
     }
 
     // Calc total
-    const sum = correctedCalibirationValues.reduce((prev, cur) => Number(prev) + Number(cur), 0)
-    console.log(sum)
+    const answer = correctedCalibirationValues.reduce((prev, cur) => Number(prev) + Number(cur), 0)
+    console.log('Answer: ', answer)
 }
 
 const inputReader = () => {

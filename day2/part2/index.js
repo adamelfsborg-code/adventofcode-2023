@@ -31,8 +31,8 @@ async function main() {
         powers.push(highestRed * highestGreen * highestBlue)
     }
 
-    const sum = powers.reduce((prev, cur) => Number(prev) + Number(cur), 0)
-    console.log(sum)
+    const answer = powers.reduce((prev, cur) => Number(prev) + Number(cur), 0)
+    console.log('Answer: ', answer)
 }
 
 const inputReader = () => {

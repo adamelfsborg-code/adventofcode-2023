@@ -14,13 +14,12 @@ async function main() {
         const game = games[index];
 
         const gameID = Number(game.substring(0, game.indexOf(":")).split(' ')[1]);
-
         const cubes = game.substring(game.indexOf(":") + 1, game.length).trim();
 
 
         const bags = cubes.split(';')
         const bagsLength = bags.length;
-        
+
         for (let bi = 0; bi < bagsLength; bi++) {
             const colors = bags[bi].split(',');
             const colorsLength = colors.length;
@@ -51,8 +50,8 @@ async function main() {
 
     }
 
-    const sum = possibleGames.reduce((prev, cur) => Number(prev) + Number(cur), 0)
-    console.log(sum)
+    const answer = possibleGames.reduce((prev, cur) => Number(prev) + Number(cur), 0)
+    console.log('Answer: ', answer)
 }
 
 const inputReader = () => {

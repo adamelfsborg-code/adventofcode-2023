@@ -13,6 +13,7 @@ async function main() {
         let firstValue = -1
         let lastValue = -1
 
+        // Find first number
         for (let char = 0; char < valueLength; char++) {
             if (isNumeric(value[char])) {
                 firstValue = value[char]
@@ -20,6 +21,7 @@ async function main() {
             }
         }
         
+        // Find last number
         for (let char = valueLength; char >= 0; char--) {
             if (isNumeric(value[char])) {
                 lastValue = value[char]
@@ -28,12 +30,14 @@ async function main() {
 
         }
 
+        // Combine numbers
         const combinedCombinationCode = `${firstValue}${lastValue}`
         correctedCalibirationValues.push(combinedCombinationCode)
     }
 
-    const sum = correctedCalibirationValues.reduce((prev, cur) => Number(prev) + Number(cur), 0)
-    console.log(sum)
+    // Calc total
+    const answer = correctedCalibirationValues.reduce((prev, cur) => Number(prev) + Number(cur), 0)
+    console.log('Answer: ', answer)
 }
 
 const inputReader = () => {
