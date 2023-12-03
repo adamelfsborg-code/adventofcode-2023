@@ -4,12 +4,10 @@ async function main() {
     const calibrations = await inputReader()
     const calibrationsLength = calibrations.length;
     const correctedCalibirationValues = [];
-
     const textDidgets = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
     const textDidgetsLength = textDidgets.length;
 
     for (let calibration = 0; calibration < calibrationsLength; calibration++) {
-
         const value = calibrations[calibration];
         const valueLength = value.length;
 

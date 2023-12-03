@@ -3,14 +3,11 @@ const fs = require('fs')
 async function main() {
     const games = await inputReader();
     const gamesLength = games.length;
-
     const powers = []
 
     for (let index = 0; index < gamesLength; index++) {
         const game = games[index];
-
         const cubes = game.substring(game.indexOf(":") + 1, game.length).trim();
-
         const hands = cubes.replaceAll(';', ',').split(',')
         const handsLength = hands.length;
     
@@ -20,7 +17,6 @@ async function main() {
 
         for (let bi = 0; bi < handsLength; bi++) {
             const hand = hands[bi].trim();
-
             const [amout, color] = hand.split(' ')
     
             if (color === 'red') highestRed = Number(amout) > highestRed ? Number(amout) : highestRed
@@ -43,6 +39,5 @@ const inputReader = () => {
         })
     })
 }
-
 
 main()

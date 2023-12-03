@@ -7,15 +7,12 @@ const MAX_BLUE_CUBES = 14;
 async function main() {
     const games = await inputReader();
     const gamesLength = games.length;
-
     const possibleGames = []
 
     games: for (let index = 0; index < gamesLength; index++) {
         const game = games[index];
-
         const gameID = Number(game.substring(0, game.indexOf(":")).split(' ')[1]);
         const cubes = game.substring(game.indexOf(":") + 1, game.length).trim();
-
 
         const bags = cubes.split(';')
         const bagsLength = bags.length;
@@ -30,8 +27,6 @@ async function main() {
             
             for (let ci = 0; ci < colorsLength; ci++) {
                 const hand = colors[ci].trim();
-                
-         
                 const [amout, color] = hand.split(' ')
         
                 if (color === 'red') totalRed += Number(amout)
@@ -43,11 +38,8 @@ async function main() {
                 continue games
             } 
         }
-
+        
         possibleGames.push(gameID)
-        continue games
-    
-
     }
 
     const answer = possibleGames.reduce((prev, cur) => Number(prev) + Number(cur), 0)
@@ -62,6 +54,5 @@ const inputReader = () => {
         })
     })
 }
-
 
 main()
