@@ -65,15 +65,6 @@ async function main() {
     console.log('Answer', answer)
 }
 
-const inputReader = () => {
-    return new Promise((resolve, reject) => {
-        fs.readFile('schematic.txt', (err, inputD) => {
-            if (err) return reject(err);
-            resolve(inputD.toString().split('\n'))
-        })
-    })
-}
-
 const addPartnumberPos = (arr, row, col) => {
     sign = arr[row][col]
 
@@ -113,5 +104,13 @@ function getNumberAndNeighbors(grid, row, col) {
    }
 }
 
+const inputReader = () => {
+    return new Promise((resolve, reject) => {
+        fs.readFile('example.txt', (err, inputD) => {
+            if (err) return reject(err);
+            resolve(inputD.toString().split('\n'))
+        })
+    })
+}
 
 main()

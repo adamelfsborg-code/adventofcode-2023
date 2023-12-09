@@ -67,7 +67,7 @@ async function main() {
 
 const inputReader = () => {
     return new Promise((resolve, reject) => {
-        fs.readFile('calibration-document.txt', (err, inputD) => {
+        fs.readFile('example.txt', (err, inputD) => {
             if (err) return reject(err);
             resolve(inputD.toString().split('\n'))
         })
